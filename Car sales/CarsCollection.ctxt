@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=CarsCollection
+comment1.params=
+comment1.target=CarsCollection()
+comment10.params=file
+comment10.target=void\ saveCars(java.lang.String)
+comment11.params=minPrice\ maxPrice\ minDistance\ maxDistance
+comment11.target=Car[]\ search(int,\ int,\ double,\ double)
+comment12.params=minAge\ maxAge
+comment12.target=Car[]\ search(int,\ int)
+comment2.params=c
+comment2.target=int\ addCar(Car)
+comment3.params=
+comment3.target=int\ carsCount()
+comment4.params=
+comment4.target=int\ manufacturerCount()
+comment5.params=
+comment5.target=Car[]\ getAllCars()
+comment6.params=
+comment6.target=double\ getAverageAge()
+comment7.params=
+comment7.target=double\ getAverageDistance()
+comment8.params=
+comment8.target=double\ getAveragePrice()
+comment9.params=file
+comment9.target=void\ loadCars(java.lang.String)
+numComments=13

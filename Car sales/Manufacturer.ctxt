@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Manufacturer
+comment1.params=nam\ c
+comment1.target=Manufacturer(java.lang.String,\ Car)
+comment2.params=c
+comment2.target=void\ addCar(Car)
+comment3.params=
+comment3.target=int\ carCount()
+comment4.params=
+comment4.target=Car[]\ getAllCars()
+comment5.params=
+comment5.target=java.lang.String\ getManufacturerName()
+comment6.params=c\ extendBy
+comment6.target=Car[]\ resizeArray(Car[],\ int)
+comment7.params=nam
+comment7.target=void\ setManufacturersName(java.lang.String)
+numComments=8

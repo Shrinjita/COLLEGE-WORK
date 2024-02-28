@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Find Size of fundamental data types :" << endl;
+    cout << "------------------------------------------" << endl;
+    cout << "The sizeof(char) is : " << sizeof(char) << " bytes," << endl;
+    cout << "The sizeof(int) is : " << sizeof(int) << " bytes," << endl;
+    cout << "The sizeof(float) is : " << sizeof(float) << " bytes," << endl;
+    cout << "The sizeof(double) is : " << sizeof(double) << " bytes," << endl;
+    cout << "The sizeof(bool) is : " << sizeof(bool) << " bytes" << endl;
+    return 0;
+}

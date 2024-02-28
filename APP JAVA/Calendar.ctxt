@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Calendar
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=year\ month
+comment2.target=void\ printCalendar(int,\ int)
+comment3.params=year\ month
+comment3.target=int\ getStartDay(int,\ int)
+comment4.params=year\ month
+comment4.target=int\ getDaysInMonth(int,\ int)
+comment5.params=year
+comment5.target=boolean\ isLeapYear(int)
+numComments=6

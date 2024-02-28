@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=AboutDialog
+comment1.params=parent\ title\ modal
+comment1.target=AboutDialog(javax.swing.JFrame,\ java.lang.String,\ boolean)
+comment2.params=ev
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=
+comment3.target=void\ closing()
+comment4.params=
+comment4.target=void\ showAbout()
+numComments=5
