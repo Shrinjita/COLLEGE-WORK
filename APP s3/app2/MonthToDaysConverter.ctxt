@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=MonthToDaysConverter
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=monthName
+comment2.target=int\ convertMonthToDays(java.lang.String)
+numComments=3

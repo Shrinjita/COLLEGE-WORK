@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=AttendanceManagementGUI
+comment1.params=
+comment1.target=AttendanceManagementGUI()
+comment2.params=e
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=e
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment4.params=studentId
+comment4.target=void\ markAttendance(java.lang.String)
+comment5.params=attendanceTextArea
+comment5.target=void\ displayAttendance(javax.swing.JTextArea)
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+comment7.params=
+comment7.target=void\ run()
+numComments=8
