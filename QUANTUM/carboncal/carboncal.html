@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('serve_static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Carbon Footprint Calculator</h1>
+    <div class="form-container">
+        <form id="carbon-form" action="/calculate" method="post">
+            <label for="activity">Activity:</label>
+            <select name="activity" id="activity" required>
+                <option value="food">Food</option>
+                <option value="electricity">Electricity</option>
+                <option value="travel">Travel</option>
+                <!-- Add other options for different activities as needed -->
+            </select>
+
+            <label for="energy_used">Energy Used (kWh):</label>
+            <input type="number" name="energy_used" id="energy_used" step="0.01" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+
+    <div id="result-container">
+        <p id="result-text"></p>
+        <button id="go-back-button">Go Back</button>
+    </div>
+
+    <script src="{{ url_for('serve_static', filename='js/script.js') }}"></script>
+</body>
+</html>

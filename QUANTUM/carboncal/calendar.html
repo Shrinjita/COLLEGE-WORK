@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Mini Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        td {
+            cursor: pointer;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calendar</h1>
+    </header>
+    <div class="container">
+        <table id="calendar">
+            <thead>
+                <tr>
+                    <th colspan="7" id="currentMonth"></th>
+                </tr>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody">
+            </tbody>
+        </table>
+        <div class="btn-container">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for the calendar mini website
+        const calendarBody = document.getElementById("calendarBody");
+        const currentMonthElement = document.getElementById("currentMonth");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        // Function to generate the calendar for a given month and year
+        function generateCalendar(month, year) {
+            calendarBody.innerHTML = "";
+
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+
+            const numDays = lastDay.getDate();
+            const startDay = firstDay.getDay();
+
+            let date = 1;
+
+            for (let i = 0; i < 6; i++) {
+                const row = document.createElement("tr");
+
+                for (let j = 0; j < 7; j++) {
+                    if (i === 0 && j < startDay) {
+                        const cell = document.createElement("td");
+                        row.appendChild(cell);
+                    } else if (date > numDays) {
+                        break;
+                    } else {
+                        const cell = document.createElement("td");
+                        cell.textContent = date;
+                        row.appendChild(cell);
+                        date++;
+                    }
+                }
+
+                calendarBody.appendChild(row);
+            }
+
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            currentMonthElement.textContent = months[month] + " " + year;
+        }
+
+        // Event listeners for previous and next buttons
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+
+        prevBtn.addEventListener("click", function () {
+            if (currentMonth === 0) {
+                currentMonth = 11;
+                currentYear -= 1;
+            } else {
+                currentMonth -= 1;
+            }
+            generateCalendar(currentMonth, currentYear);
+        });
+
+        nextBtn.addEventListener("click", function () {
+            if (currentMonth === 11) {
+                currentMonth = 0;
+                currentYear += 1;
+            } else {
+                currentMonth += 1;
+            }
+            generateCalendar(currentMonth, currentYear);
+        });
+
+        // Initial generation of the calendar
+        generateCalendar(currentMonth, currentYear);
+    </script>
+</body>
+</html>
