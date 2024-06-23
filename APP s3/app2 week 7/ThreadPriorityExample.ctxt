@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=ThreadPriorityExample
-comment1.params=name\ priority
-comment1.target=MyThread(java.lang.String,\ int)
-comment2.params=
-comment2.target=void\ run()
-comment3.params=args
-comment3.target=void\ main(java.lang.String[])
-numComments=4
